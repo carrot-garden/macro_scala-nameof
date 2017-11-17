@@ -63,5 +63,5 @@ lazy val nameof = crossProject.crossType(CrossType.Pure).in(file("."))
   .settings(sharedSettings: _*)
   .settings(name := "scala-nameof")
 
-lazy val nameofJVM = nameof.jvm
-lazy val nameofJS = nameof.js
+lazy val nameofJVM = nameof.jvm.settings(name := "scala-nameof-jvm")
+lazy val nameofJS = nameof.js.settings(name := "scala-nameof-js")
